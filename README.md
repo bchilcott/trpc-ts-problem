@@ -4,6 +4,8 @@ This repo intends to reproduce an issue where running `tsc` with `noEmit` to typ
 
 The demo is built with SST, but you don't have to have that running to produce the issue.
 
+The problem stems from [packages/web/src/trpc.ts](packages/web/src//trpc.ts) where the type of the trpc router is imported.
+
 **Note:** `noUnusedLocals` and `noUnusedParameters` are explicitly enabled in the `web` project, but disabled in the `api` project - to demonstrate the mixing of rules.
 
 ## To reproduce...
